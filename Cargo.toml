@@ -1,0 +1,21 @@
+[package]
+name = "nv-ralloc"
+version = "0.1.0"
+authors = ["Sheldon Knuth <sheldon@abackbone.net>"]
+edition = "2018"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+# Metadatas
+description = "A recoverable lock-free persistent memory allocator."
+keywords = ["alloc", "pmdk", "pmem", "persistent", "memory", "lock-free", "non-blocking", "garbage"]
+categories = ["concurrency", "memory-management", "no-std", "hardware-support"]
+
+[profile.release]
+panic = "abort"
+opt-level = 2
+debug = false
+debug-assertions = false
+rpath = false
+lto = true
+codegen-unit = 1
